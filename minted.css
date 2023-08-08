@@ -1,0 +1,21 @@
+*{
+    color: black;
+    transition: 0.8s;
+    font-family: Poppins;
+}
+
+.main-1-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    /* border: 1px solid red; */
+}
+
+.name-div {
+    border-left: 8px solid blue;
+}
+
+.image-side img{
+    width: 100%;
+}

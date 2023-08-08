@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Pompiere|Amiko|Rambla|Montserrat" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sample.css">
+    <link rel="stylesheet" href="./minted.css">
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+
+</head>
+<body>
+    <!-- <div id="loader_id" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>              -->
+    <div class="lds-ring" id="loader_id"><div></div><div></div><div></div><div></div></div>
+
+    <div class="main-1-div" id="minted_pamge">
+        <div class="detail-side col-md-6 col-sm-12 p-5">
+            <h1 class="font-weight-bold fs-2 text-center text-primary pb-3">CONGRATULATIONS 🥳🥳</h1>
+            <p class="text-center">Your NFT has been minted ✨✨</p>
+            <div class="input-fields">
+                <div class="name-div mt-4 p-1 ps-2">
+                    <h3>NFT NAME</h3>
+                    <p id="nft-para-69" class="ps-3">Cryptox</p>
+                </div>
+                <div class="name-div mt-4 p-1 ps-2">
+                    <h3>NFT Decription</h3>
+                    <p id="nft-desc-69" class="ps-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita, voluptates
+                        consequatur officia consectetur est debitis, ipsum doloribus cumque voluptate porro 
+                        ex velit veritatis placeat magni aspernatur, quasi repellat nobis?
+                    </p>
+                </div>
+                <div class="name-div mt-4 p-1 ps-2">
+                    <h3>OpenSea Testnet URL:</h3>
+                    <p class="ps-3">
+                        <a id="myAnchor" href="https://testnets.opensea.io/assets/rinkeby/0x3a458Db8C1EEbEF5E0d5FaC0a84B68E13EDA1c42/1">
+                            Click Here to see your Minted NFT 🥳🥳
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="image-side col-md-6 col-sm-12 p-5">
+            <img id="image_pic" src="https://ipfs.moralis.io:2053/ipfs/QmcMrS53bhPDTusuRshp6ENBbaEUppxcSBrnFJt5Tv1B63">
+        </div>
+    </div>
+
+    <div id="submitted_bumtton" class="button_subm d-flex justify-content-end align-items-center">
+        <button id="btn-login" class="button d-flex justify-content-end align-items-center bg-transparent m-5 pe-4 ps-4 rounded-lg" onclick="login()">
+            Connect to Wallet
+            <p class="fs-4 ps-3">💳</p>
+        </button>
+    </div>
+
+    <div class="parent-div">   
+        <div class="main-div col-sm-8" id="main-loader">
+            <form>
+                <div class="nft-minter-heading d-flex justify-content-start align-items-center mb-3">
+                    <p class="fs-2">🎅</p>
+                    <h1 class="ps-3">Cryptox NFT Minter</h1>
+                </div>
+
+                <div class="input-label p-4 m-2">
+                    <div class="div-label d-flex justify-content-start align-items-center mb-2">
+                        <p class="fs-4 pe-3">👽</p>
+                        <label><span>NFT Name: </span></label>
+                    </div>
+                    <input type="text" class="question bg-transparent text-dark p-1 mb-3" id="name" placeholder="e.g. Cryptox" />
+                </div>
+
+                <div class="input-label p-4 m-2">
+                    <div class="div-label d-flex justify-content-start align-items-center mb-2">
+                        <p class="fs-4 pe-3">🐬</p>
+                        <label><span>NFT Description: </span></label>
+                    </div>
+                    <input type="text" class="question bg-transparent text-dark p-1 mb-3" id="description" placeholder="e.g. Cryptox is an interactive 2 day workshop">
+                <div>
+
+                <div class="input-label-image pt-4 mt-4 mb-5">
+                    <div class="div-label d-flex justify-content-start align-items-center mb-2">
+                        <p class="fs-4 pe-3">🤯</p>
+                        <label for="msg"><span>Upload Image: </span></label>
+                    </div>
+                    <input type="file" class="question" id="image" />
+                </div>
+
+                <div class="button_subm d-flex justify-content-end align-items-center">
+                    <button id="btn-upload" class="button d-flex justify-content-end align-items-center bg-transparent pe-4 ps-4 rounded" onclick="upload()">
+                        Mint NFT
+                        <p class="fs-5 ps-3">🤑</p>
+                    </button>
+                    
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis-v1/dist/moralis.min.js"></script>
+    <!-- <script type="text/javascript" src="./index.js"></script> -->
+    <script src="./index.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
